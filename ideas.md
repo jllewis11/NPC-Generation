@@ -4,9 +4,17 @@ Era, Time period (description of the time period), (description of the species)
 
 ``` json
 {
-  "era":"",
-  "time_period":"",
-  "detail":""
+"era": "",
+"time_period": "",
+"detail": {
+  "Environment": " ",
+  "Social and Economic Aspects": "",
+  "Livelihood": "",
+  "Social Hierarchy": "",
+  "Cultural Norms": "",
+  "Natural Environment": "",
+  "Political Climate": ""
+  }
 }
 ```
 
