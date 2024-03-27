@@ -8,17 +8,21 @@ import example
 from utils.read import read_json
 from tools.personality import read_personality
 from tools.names import generate_names
+from dotenv import load_dotenv
 
+
+load_dotenv()
 client = OpenAI(
     # This is the default and can be omitted
-    api_key=os.environ.get("OPENAI"), )
+    api_key=os.getenv("OPENAI"), 
+)
 
 
 def character_generation(prompt, examples, name):
 
   # Add a prompt for the model to generate a new example
   prompt += "Create a new character profile that fits in this environment with the following personality " + str(
-      read_personality) + " and this name " + name
+      read_personality()) + " and this name " + name
 
   print(prompt)
 
@@ -77,14 +81,13 @@ def instruction(file_obj, amount):
 
   names = generate_names(file_obj, amount)
   for x in range(amount):
-
-    character = character_generation(prompt, examples, name[x])
+    character = character_generation(prompt, examples, names[x])
     charlist.append(json.loads(character))
 
   with open('output.json', 'a') as outfile:
     json.dump(charlist, outfile)
 
-  return charlist[0:3]
+  return charlist
 
 
 # Create Gradio Interface

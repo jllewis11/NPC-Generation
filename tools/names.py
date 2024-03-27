@@ -3,11 +3,13 @@ import os
 import gradio as gr
 from openai import OpenAI
 from utils.read import read_json
+from dotenv import load_dotenv
 
+load_dotenv()
 
 client = OpenAI(
   # This is the default and can be omitted
-  api_key=os.environ.get("OPENAI"),
+  api_key=os.getenv("OPENAI"),
 )
 
 def generate_names(file_obj, amount):
@@ -18,7 +20,7 @@ def generate_names(file_obj, amount):
       f"Detail: {data['detail']}\n\n"
   )
   
-  prompt = environment_context + "Given the json file describing an environment, create " + str(amount) + " unique names for NPCs in that environment. Output a list of these names in a json format." 
+  prompt = environment_context + "Given the json file describing an environment, create " + str(amount) + " unique names that don't repeat for NPCs in that environment. Output a list of these names in a json format." 
 
   chat_completion = client.chat.completions.create(
     response_format={ "type": "json_object" },
@@ -38,12 +40,3 @@ def generate_names(file_obj, amount):
 
   print(chat_completion.choices[0].message.content)
   return chat_completion.choices[0].message.content
-
-
-demo = gr.Interface(fn=generate_names,
-                    inputs="file",
-                    outputs=["json"],
-                    title="JSON File Reader",
-                    description="Upload a JSON file and see its contents.")
-
-demo.launch(share=True)

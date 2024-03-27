@@ -5,7 +5,7 @@ import json
 
 def read_personality():
   p = ""
-  with open("personality.txt", "r") as f:
+  with open("data/personality.txt", "r") as f:
     p = f.read()
 
   
