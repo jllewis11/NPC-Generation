@@ -5,12 +5,13 @@ import json
 
 def read_personality():
   p = ""
-  with open("data/personality.txt", "r") as f:
+  with open("personality.txt", "r") as f:
     p = f.read()
 
-  
-  with open(os.path.join(os.path.dirname(__file__), "../data/polar_opposites.json"), "r") as json_file:
-      polar_opposites = json.load(json_file)
+  with open(
+      os.path.join(os.path.dirname(__file__), "../data/polar_opposites.json"),
+      "r") as json_file:
+    polar_opposites = json.load(json_file)
   p = p.replace("\n", " ").split()
 
   personality_list = random.sample(p, 5)
@@ -19,14 +20,11 @@ def read_personality():
 
     for i, personality in enumerate(personality_list):
       if polar_opposites.get(personality) in personality_list:
-          personality_list[i] = random.choice(p)
+        personality_list[i] = random.choice(p)
 
-    if not any(polar_opposites.get(x) in personality_list for x in personality_list):
+    if not any(
+        polar_opposites.get(x) in personality_list for x in personality_list):
       isReady = True
       break
-          
-  print(personality_list)
+
   return personality_list
-
-
-read_personality()

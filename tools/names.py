@@ -5,14 +5,17 @@ from openai import OpenAI
 from utils.read import read_json
 from dotenv import load_dotenv
 
-load_dotenv()
 
-client = OpenAI(
-  # This is the default and can be omitted
-  api_key=os.getenv("OPENAI"),
-)
+
+
+
 
 def generate_names(file_obj, amount):
+  load_dotenv()
+  client = OpenAI(
+    # This is the default and can be omitted
+    api_key=os.getenv("OPENAI_API_KEY"),
+  )
   data = read_json(file_obj)
   environment_context = (
       f"Era: {data['era']}, "
@@ -20,7 +23,7 @@ def generate_names(file_obj, amount):
       f"Detail: {data['detail']}\n\n"
   )
   
-  prompt = environment_context + "Given the json file describing an environment, create " + str(amount) + " unique names that don't repeat for NPCs in that environment. Output a list of these names in a json format." 
+  prompt = environment_context + "Given the json file describing an environment, create " + str(amount) + " unique names for NPCs in that environment. Output a list of these names in a json format." 
 
   chat_completion = client.chat.completions.create(
     response_format={ "type": "json_object" },

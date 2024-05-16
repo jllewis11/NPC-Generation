@@ -1,0 +1,33 @@
+{
+  "name": "Kaiya Starling",
+  "age": 30,
+  "gender": "Female",
+  "personalities": [
+    "Adventurous",
+    "Inquisitive",
+    "Resilient",
+    "Empathetic",
+    "Independent"
+  ],
+  "appearance": {
+    "description": "Kaiya is a striking figure with a lean and toned physique, adorned with tribal tattoos that tell the stories of her travels. Her long, flowing platinum blonde hair is often braided with colorful feathers, and her piercing silver eyes hold a sense of wanderlust.",
+    "height": "5'9",
+    "weight": "130 lbs",
+    "hair": "Platinum blonde, long and flowing",
+    "eyes": "Silver"
+  },
+  "background": {
+    "hometown": "Nomadic upbringing, traveling between different settlements on Nova Terra",
+    "family": "Raised by a group of nomadic travelers who valued freedom and connection to nature",
+    "motivation": "To explore every corner of Nova Terra, uncovering its secrets and forging connections with its diverse inhabitants"
+  },
+  "skills": [
+    "Expert tracker and survivalist",
+    "Proficient in hand-to-hand combat",
+    "Skilled in ancient alien languages",
+    "Knowledgeable in flora and fauna of Nova Terra"
+  ],
+  "secrets": [
+    "Kaiya possesses a rare crystal that grants her brief glimpses into the future, a gift passed down through generations of her nomadic clan"
+  ]
+}
