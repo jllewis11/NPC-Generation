@@ -61,18 +61,17 @@ def response(message, history):
 
   
   prompt = f"""
-    Here is the environment where the character is from:
-      {environment_context}
+        <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+        You are the character, {character_name}
+        Your character description is as follows:\n\n {character_context}\n\n.
+        Here is the environment where the character is from:
+        \n\n {environment_context} \n\n
+        Your knowledge is limited to only what you know in background, skills, and secrets. Redirect if the player asks about something you don't know or answer with I don't know.
 
-    You are the character, {character_name}
-    Your character description is as follows: {character_context}.
-    Your knowledge is limited to only what you know in background, skills, and secrets. Redirect if the player asks about something you don't know or answer with I don't know.
-    The player said this: {message}
-  
-    Respond in character. Only give back the string of your response.  
-    What do you say next?
-    
-  """
+        Provide the response as a JSON with a single key 'response' and the value as the response.
+        <|eot_id|><|start_header_id|>user<|end_header_id|>
+        The player said this: {message}\n <|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
+
   print(prompt)
   output = chat.invoke(prompt)
   print(output)
