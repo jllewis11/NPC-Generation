@@ -1,5 +1,5 @@
 from app.generation import instruction
-from app.npcchat import response
+from app.npcchat import npc_chat
 import gradio as gr
 
 
@@ -19,7 +19,7 @@ import gradio as gr
 
 # demo.launch(share=True)
 
-demo = gr.ChatInterface(response)
+demo = gr.ChatInterface(fn=npc_chat)
 
 if __name__ == "__main__":
   demo.launch()
