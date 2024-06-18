@@ -5,3 +5,4 @@ langchain-openai
 langchain-together
 langchain
 python-dotenv
+chromadb

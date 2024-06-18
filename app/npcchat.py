@@ -1,6 +1,6 @@
 import os
 import gradio as gr
-
+import time
 import json
 from langchain_together import ChatTogether
 from dotenv import load_dotenv
@@ -34,6 +34,9 @@ chat = ChatTogether(
 )
 
 def npc_chat(message, history):
+    initial_time = time.time()
+
+
     load_dotenv()
 
     environment_context = None
@@ -81,7 +84,9 @@ def npc_chat(message, history):
 
     output = chat.invoke(prompt)
     print(output)
+    t = f"Time taken: {time.time() - initial_time}"
+    print(t)
 
-    return output.content
+    return t + "\n\n" + output.content
 
 

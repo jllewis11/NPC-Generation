@@ -32,3 +32,11 @@ Reference Links
 
 Langchain Integration
 Langchain Use Cases
+
+
+## Idea 
+
+- Create a knowledge graph from all the generated characters to create a base knowledge for the world  (encyclopedia).
+- Create a knowledge graph for individual characters. 
+- There is a chance where the character will generate new knowledge and update it to the base knowledge graph.
+  - Create a mechanism where only a chance will be know knowledge. 
