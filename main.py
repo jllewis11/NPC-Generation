@@ -1,6 +1,7 @@
 from app.generation import instruction
-from app.npcchat import npc_chat
+from app.npcchat import npc_chat, shutdown
 import gradio as gr
+
 
 
 # Create Gradio Interface
@@ -19,8 +20,16 @@ import gradio as gr
 
 # demo.launch(share=True)
 
+
+
+
+
 demo = gr.ChatInterface(fn=npc_chat)
 
 if __name__ == "__main__":
   demo.launch()
 
+
+
+  # Capture shutdown signals
+  demo.close(shutdown)

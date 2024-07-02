@@ -4,6 +4,8 @@ import time
 import json
 from langchain_together import ChatTogether
 from dotenv import load_dotenv
+import chromadb
+import uuid
 
 def json_to_string(json_data):
     def process_dict(dictionary):
@@ -33,24 +35,33 @@ chat = ChatTogether(
         together_api_key=os.getenv("TOGETHER_API_KEY"),
 )
 
+environment_context = None
+character_context = None
+
+with open("JSONdata/prompt2.json", "r") as file:
+    environment_context = json_to_string(json.load(file))
+
+with open("JSONdata/KaiyaStarling.json", "r") as file:
+    character_context = json_to_string(json.load(file))
+
+client = chromadb.PersistentClient( path="/data")
+
+
 def npc_chat(message, history):
     initial_time = time.time()
-
-
     load_dotenv()
 
-    environment_context = None
-    character_context = None
+    # Initialize chromaDB
+
     character_name = "Kaiya Starling"
+    collection = client.get_or_create_collection(name=character_name.replace(" ", "_"))
 
-    with open("data/prompt2.json", "r") as file:
-        environment_context = json_to_string(json.load(file))
-
-    with open("data/KaiyaStarling.json", "r") as file:
-        character_context = json_to_string(json.load(file))
+    results = collection.query(
+    query_texts=[message], # Chroma will embed this for you
+    n_results=2 # how many results to return
+    )
 
     #Create a character_description that ensures that the LLM only response to the confines of the character's background, skills, and secrets. 
-
     #Save previous messages using chromaDB
     system_prompt = f"""
     You are the character, {character_name}
@@ -60,7 +71,13 @@ def npc_chat(message, history):
     Your knowledge is limited to only what you know in background, skills, and secrets. Redirect if the player asks about something you don't know or answer with I don't know.
 
     Here is what we have said so far:
+
+    History:
     \n\n{history}\n\n
+
+    From memory:
+    {results}
+
     """
 
     user_msg = f"""
@@ -84,9 +101,23 @@ def npc_chat(message, history):
 
     output = chat.invoke(prompt)
     print(output)
+
+    # Generate UUID for the document
+
+    collection.add(
+    documents=[
+            output.content,
+        ],
+    metadatas=[{"time": time.time()}],
+    ids=[str(uuid.uuid4())]
+    )
+
+
     t = f"Time taken: {time.time() - initial_time}"
     print(t)
 
     return t + "\n\n" + output.content
 
 
+def shutdown():
+    client.close()
