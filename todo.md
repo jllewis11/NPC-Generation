@@ -40,3 +40,6 @@ Langchain Use Cases
 - Create a knowledge graph for individual characters. 
 - There is a chance where the character will generate new knowledge and update it to the base knowledge graph.
   - Create a mechanism where only a chance will be know knowledge. 
+
+Change from chromadb to pinecone.io for chat history.
+```
