@@ -44,7 +44,9 @@ with open("JSONdata/prompt2.json", "r") as file:
 with open("JSONdata/KaiyaStarling.json", "r") as file:
     character_context = json_to_string(json.load(file))
 
-client = chromadb.PersistentClient( path="/data")
+persist_directory = "data"
+
+client = chromadb.PersistentClient(path=persist_directory)
 
 
 def npc_chat(message, history):
@@ -60,6 +62,8 @@ def npc_chat(message, history):
     query_texts=[message], # Chroma will embed this for you
     n_results=2 # how many results to return
     )
+
+    print(results)
 
     #Create a character_description that ensures that the LLM only response to the confines of the character's background, skills, and secrets. 
     #Save previous messages using chromaDB
