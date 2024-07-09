@@ -41,5 +41,11 @@ Langchain Use Cases
 - There is a chance where the character will generate new knowledge and update it to the base knowledge graph.
   - Create a mechanism where only a chance will be know knowledge. 
 
-Change from chromadb to pinecone.io for chat history.
+- We shouldn't store each response back into the knowledge graph. Instead, we should store the main points and the main points should be used to generate the response.
+- Create a method to analyze the response and determine if it is a new knowledge or not. If it is new knowledge, then update the knowledge graph.
+- Generate a bullet point list of the character's response to store in the knowledge graph.
+
+
+
+
 ```
