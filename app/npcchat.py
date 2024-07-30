@@ -7,28 +7,6 @@ from dotenv import load_dotenv
 import chromadb
 import uuid
 
-def json_to_string(json_data):
-    def process_dict(dictionary):
-        result = ""
-        for key, value in dictionary.items():
-            if isinstance(value, dict):
-                result += f"\n- {key}:\n" + process_dict(value)
-            elif isinstance(value, list):
-                result += f"\n- {key}:\n" + process_list(value)
-            else:
-                result += f"\n- {key}: {value}"
-        return result
-
-    def process_list(lst):
-        result = ""
-        for item in lst:
-            result += f"  - {item}\n"
-        return result
-
-    if isinstance(json_data, str):
-        json_data = json.loads(json_data)
-
-    return process_dict(json_data)
 
 chat = ChatTogether(
         model="meta-llama/Llama-3-8b-chat-hf",
@@ -39,10 +17,10 @@ environment_context = None
 character_context = None
 
 with open("JSONdata/prompt2.json", "r") as file:
-    environment_context = json_to_string(json.load(file))
+    environment_context = json.load(file)
 
 with open("JSONdata/KaiyaStarling.json", "r") as file:
-    character_context = json_to_string(json.load(file))
+    character_context = json.load(file)
 
 persist_directory = "data"
 
@@ -72,8 +50,9 @@ def npc_chat(message, history):
     Your character description is as follows:\n\n {character_context}\n\n.
     Here is the environment where the character is from:
     \n\n {environment_context} \n\n
+    Your speech pattern influenced by your personalities which are {character_context['personalities']}.
     Your knowledge is limited to only what you know in background, skills, and secrets. Redirect if the player asks about something you don't know or answer with I don't know.
-
+    
     Here is what we have said so far:
 
     History:

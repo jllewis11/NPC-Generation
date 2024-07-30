@@ -12,6 +12,7 @@ gradio = "^4.8.0"
 langchain-openai = "^0.1.3"
 langchain-together = "^0.1.0"
 langchain = "^0.2.0"
+chromadb = "^0.5.5"
 
 [tool.pyright]
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md
