@@ -33,7 +33,7 @@ def npc_chat(message, history):
 
     # Initialize chromaDB
 
-    character_name = "Kaiya Starling"
+    character_name = character_context["name"]
     collection = client.get_or_create_collection(name=character_name.replace(" ", "_"))
 
     results = collection.query(
