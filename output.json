@@ -1,167 +1,100 @@
 [
   {
-    "name": "Kael",
+    "name": "Kaelan Thorne",
     "age": 32,
-    "gender": "Male",
-    "personalities": [
-      "Innovative",
-      "Visionary",
-      "Empathetic",
-      "Eccentric"
-    ],
-    "appearance": {
-      "description": "Kael is a tall and wiry man with a unique style, favoring asymmetrical clothing made from organic materials. His silver hair is often tied back in a loose braid, and his almond-shaped eyes shimmer with a kaleidoscope of colors, reflecting his emotional state.",
-      "height": "6'1\"",
-      "weight": "150 lbs",
-      "hair": "Silver, long and braided",
-      "eyes": "Kaleidoscopic"
-    },
-    "background": {
-      "hometown": "A vibrant city called Solara, located near the crystalline mountains of Nova Terra",
-      "family": "Kael comes from a family of artisans known for their innovative use of natural materials in technology and art. He was raised in an environment that constantly encouraged creativity.",
-      "motivation": "Driven by a desire to create sustainable technology that harmonizes with nature, Kael aims to solve the energy crisis on Nova Terra and improve the lives of marginalized communities."
-    },
-    "skills": [
-      "Expert in eco-technology",
-      "Talented industrial designer",
-      "Proficient in renewable energy systems",
-      "Highly skilled in languages, particularly the various dialects spoken by the numerous cultures on Nova Terra"
-    ],
-    "secrets": [
-      "Kael is the inventor of a controversial energy device that has attracted the scrutiny of corporate entities seeking to monopolize sustainable technologies.",
-      "He hides the fact that he has been experimenting with plant-based tech that might unlock unprecedented energy sources, fearing backlash from political factions."
-    ]
-  },
-  {
-    "name": "Zara Ixian",
-    "age": 32,
-    "gender": "female",
-    "personalities": [
-      "Adventurous",
-      "Charismatic",
-      "Skeptical",
-      "Nurturing",
-      "Innovative"
-    ],
-    "appearance": {
-      "description": "Zara is a striking figure with an energetic aura, often donning a blend of rugged and stylish attire suited for exploration. Her hair is a cascade of vibrant, multicolored braids adorned with small crystals that shimmer faintly in the light. She exudes confidence and a passion for discovery.",
-      "height": "5'9\"",
-      "weight": "145 lbs",
-      "hair": "Multicolored braids",
-      "eyes": "Emerald green"
-    },
-    "background": {
-      "hometown": "Glimmer Valley, a picturesque region nestled between luminous crystal mountains",
-      "family": "Grew up in a family of explorers; her parents spent their lives charting the uncharted terrains of Nova Terra, instilling in her a love for adventure and discovery.",
-      "motivation": "Zara seeks to uncover the secrets of Nova Terra's unique ecosystems and the lore of ancient civilizations that once thrived on the planet."
-    },
-    "skills": [
-      "Expert navigator",
-      "Knowledge of ancient languages and cultures",
-      "Skilled botanist specializing in exotic flora",
-      "Proficient in survival tactics and wilderness exploration"
-    ],
-    "secrets": [
-      "Holds the key to a hidden ancient site rumored to contain advanced technology and secrets of past civilizations",
-      "Has a network of informants among marginalized communities that she helps in return for local lore and guidance"
-    ]
-  },
-  {
-    "name": "Kael Thorne",
-    "age": 30,
     "gender": "Male",
     "personalities": [
       "Inventive",
-      "Charismatic",
-      "Rebellious",
-      "Optimistic"
+      "Strategic",
+      "Eccentric",
+      "Determined"
     ],
     "appearance": {
-      "description": "Kael is an engaging and magnetic individual with a sculpted jawline and a confident demeanor. He sports an eclectic mix of high-tech accessories and stylish clothing, often with neon accents.",
+      "description": "Kaelan is a tall and lanky figure with an air of both intelligence and unpredictability. His sharp features and bright green eyes sparkle with a hint of mischief. He often sports a rugged outfit featuring repurposed fabrics and glowing accents from the crystalline environments around Nova Terra.",
       "height": "6'1\"",
-      "weight": "180 lbs",
-      "hair": "Short, spiky black hair with bright streaks of blue",
+      "weight": "155 lbs",
+      "hair": "Short, tousled dark hair",
       "eyes": "Bright green"
     },
     "background": {
-      "hometown": "Helix City, a vibrant urban center known for its technological innovation",
-      "family": "Raised in a family of engineers and tech entrepreneurs, Kael was encouraged to explore mechanical inventions from a young age.",
-      "motivation": "Kael is driven by a desire to challenge the status quo and innovate sustainable technologies that can help marginalized communities flourish."
+      "hometown": "Brightvale, a thriving city famous for its innovation and technological advancements",
+      "family": "Raised by a family of engineers and tech enthusiasts who encouraged creativity and thinking outside the box",
+      "motivation": "Kaelan is driven to create sustainable technologies that utilize Nova Terra's resources without harming its pristine nature, hoping to bridge the gap between innovation and environmental conservation."
     },
     "skills": [
-      "Expert in mechanical engineering",
-      "Proficient in coding and software development",
-      "Excellent public speaker"
+      "Expert in sustainable technology development",
+      "Inventive problem-solver",
+      "Skilled in collaboration across different cultures",
+      "Fluent in multiple alien languages"
     ],
     "secrets": [
-      "Kael is leading a covert group of activists working to dismantle corrupt corporate practices on Nova Terra.",
-      "He has developed a prototype for a device that could solve the energy crisis but fears corporate interest will exploit it."
+      "Kaelan is secretly developing a revolutionary energy device that could significantly reduce reliance on corporate technologies, putting him at risk of corporate espionage.",
+      "He harbors a fascination with the ancient cultures of Nova Terra, often drawing inspiration for his inventions from their traditions and practices."
     ]
   },
   {
-    "name": "Kalen Thorne",
+    "name": "Thalir,",
+    "age": 32,
+    "gender": "Non-Binary",
+    "personalities": [
+      "Resourceful",
+      "Innovative",
+      "Outspoken",
+      "Empathetic"
+    ],
+    "appearance": {
+      "description": "Thalir possesses a unique and eye-catching appearance, with short, kaleidoscopic hair that shifts colors based on their emotions. Their attire is a blend of functional and artistic, featuring pockets filled with various tools for exploration and creativity.",
+      "height": "5'9\"",
+      "weight": "150 lbs",
+      "hair": "Short, kaleidoscopic, color-changing",
+      "eyes": "Sparkling green with flecks of gold"
+    },
+    "background": {
+      "hometown": "Glistening Hills, a vibrant settlement known for its innovative design and art installations",
+      "family": "Raised by a community of artisans, each contributing to their creative growth with knowledge in engineering, art, and sustainable practices",
+      "motivation": "To create sustainable technologies that harmonize with Nova Terra's ecosystems and to establish art as a means of fostering communal connections."
+    },
+    "skills": [
+      "Proficient in eco-engineering and recycling waste into new materials",
+      "Talented artist and designer specializing in interactive installations",
+      "Skilled in negotiation and community organizing"
+    ],
+    "secrets": [
+      "Thalir is experimenting with a technology that utilizes Nova Terra's crystalline formations for renewable energy, but fears corporate interests will misuse their discovery.",
+      "They harbor a personal desire to escape societal expectations and explore the galaxy as an artist, documenting diverse cultures through their work."
+    ]
+  },
+  {
+    "name": "Axel Thorne",
     "age": 32,
     "gender": "Male",
     "personalities": [
-      "Adventurous",
-      "Innovative",
+      "Philosophical",
       "Empathetic",
-      "Rebellious"
+      "Eccentric",
+      "Inventive"
     ],
     "appearance": {
-      "description": "Kalen has an athletic build, with a rugged look that showcases his love for the outdoors. He sports a well-trimmed beard and has a captivating smile that reflects his adventurous nature. His clothing is practical yet stylish, often adorned with pockets for tools and gadgets.",
+      "description": "Axel is a tall and lean man with an aura of creativity. He often wears unique outfits, hand-crafted from the materials he forages, displaying vibrant patterns resembling Nova Terra's landscapes. His clothing combines practicality with artistic flair.",
       "height": "6'1\"",
-      "weight": "180 lbs",
-      "hair": "Short, tousled dark brown hair",
-      "eyes": "Deep green with flecks of gold"
+      "weight": "155 lbs",
+      "hair": "Long, unkempt black hair with streaks of green dyed from local plant pigments",
+      "eyes": "Emerald green with a hint of gold around the pupils"
     },
     "background": {
-      "hometown": "Luna Ridge, a technologically advanced settlement nestled between the mountain ranges",
-      "family": "Raised in a family of explorers, his parents were pioneers in the field of environmental restoration, driving Kalen to appreciate the balance between technology and nature.",
-      "motivation": "Kalen aims to harness innovative technology in sustainable practices to heal damaged ecosystems and create a more equitable societal framework for marginalized communities on Nova Terra."
+      "hometown": "The Nomad City, a traveling settlement that explores different regions of Nova Terra",
+      "family": "Grew up in a family of artisans; his mother was a sculptor, and his father a musician, which greatly influenced his creative disposition.",
+      "motivation": "Axel seeks to create a universal language of art that can bridge the gaps between various cultures on Nova Terra while advocating for the preservation of natural beauty."
     },
     "skills": [
-      "Expert in environmental engineering",
-      "Proficient in survival tactics and outdoor skills",
-      "Innovative problem solver",
-      "Skilled in crafting eco-friendly technology"
+      "Creative problem-solving",
+      "Artistic expression through various mediums",
+      "Knowledge of local flora for crafting materials",
+      "Understanding of various alien cultures' arts"
     ],
     "secrets": [
-      "Kalen covertly develops experimental technology that could disrupt corporate monopolies on natural resources.",
-      "He once led a rebellion against a local corporate entity, making him a target for their retaliation."
-    ]
-  },
-  {
-    "name": "Kiran Voss",
-    "age": 32,
-    "gender": "Non-binary",
-    "personalities": [
-      "Innovative",
-      "Resilient",
-      "Empathetic",
-      "Skeptical"
-    ],
-    "appearance": {
-      "description": "Kiran has a tall and slender stature with an androgynous look, featuring sharp features and a confident demeanor. Their attire is often practical, designed for both comfort and utility, typically adorned with colorful patterns inspired by the flora of Nova Terra.",
-      "height": "6'0\"",
-      "weight": "150 lbs",
-      "hair": "Short, spiky hair dyed in vibrant hues resembling the crystalline formations of Nova Terra.",
-      "eyes": "Bright green with flecks of gold"
-    },
-    "background": {
-      "hometown": "Cyran Heights, a city known for its breathtaking views of the crystalline mountains",
-      "family": "Raised by two loving parents who are prominent environmental activists, fostering an early respect for nature",
-      "motivation": "To develop innovative eco-technologies that help preserve the planet while supporting vulnerable communities"
-    },
-    "skills": [
-      "Expert in sustainable technologies",
-      "Advanced knowledge of botany",
-      "Proficient in robotics and coding",
-      "Strong negotiation tactics"
-    ],
-    "secrets": [
-      "Kiran is secretly working on a prototype device that could rejuvenate depleted ecosystems but fears corporate sabotage and exploitation.",
-      "They grapple with feelings of inadequacy due to the high expectations placed on them from their upbringing."
+      "Axel secretly harbors resentment towards corporate entities that exploit Nova Terra's resources and has plans for a movement to unite artists and environmentalists against them.",
+      "He has created an art piece that communicates a hidden message meant to inspire revolution but hasn\u2019t yet revealed it to anyone"
     ]
   }
 ]
