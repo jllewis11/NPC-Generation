@@ -4,13 +4,14 @@ import time
 import json
 from langchain_together import ChatTogether
 from dotenv import load_dotenv
+from tools.process_dialogue import process_dialogue
 import chromadb
 import uuid
 
 
 chat = ChatTogether(
         model="meta-llama/Llama-3-8b-chat-hf",
-        together_api_key=os.getenv("TOGETHER_API_KEY"),
+        together_api_key = os.getenv("TOGETHER_API_KEY"),
 )
 
 environment_context = None
@@ -50,12 +51,12 @@ def npc_chat(message, history):
     Your character description is as follows:\n\n {character_context}\n\n.
     Here is the environment where the character is from:
     \n\n {environment_context} \n\n
-    Your speech pattern influenced by your personalities which are {character_context['personalities']}.
+    The way you speak should be influenced by your personalities, which are listed here: {character_context['personalities']}.
     Your knowledge is limited to only what you know in background, skills, and secrets. Redirect if the player asks about something you don't know or answer with I don't know.
     
     Here is what we have said so far:
 
-    History:
+    History (Use for information, but vary responses somewhat):
     \n\n{history}\n\n
 
     From memory:
@@ -84,12 +85,12 @@ def npc_chat(message, history):
 
     output = chat.invoke(prompt)
     print(output)
-
+    output = process_dialogue(output.content)
     # Generate UUID for the document
 
     collection.add(
     documents=[
-            output.content,
+            output,
         ],
     metadatas=[{"time": time.time()}],
     ids=[str(uuid.uuid4())]

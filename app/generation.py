@@ -37,7 +37,7 @@ async def character_generation(prompt, examples, name):
           "role": "user",
           "content": prompt
       }],
-      model="gpt-3.5-turbo-0125",
+      model="gpt-4o-mini-2024-07-18",
   )
   chat = ""
   character = dict()
@@ -64,6 +64,40 @@ async def character_generation(prompt, examples, name):
   # return [chat_completion.choices[0].message.content, generated_image.data[0].url]
   return "" if final is None else final
 
+async def relationship_generation(prompt,characters):
+  load_dotenv()
+  client = OpenAI(
+  # This is the default and can be omitted
+  api_key=os.getenv("OPENAI_API_KEY"), )
+
+  # Add a prompt for the model to generate a new example
+  prompt += " Given a list of characters, generate a edge list of relationships between them with a backstory and a description of the relationship. Add a weight to each relationship between -1 and 1. Have a good mix between positive and negative relationships. This is the list of characters: " + str(characters)
+
+  print(prompt)
+
+  chat_completion = client.chat.completions.create(
+      response_format={"type": "json_object"},
+      messages=[{
+          "role":
+          "system",
+          "content":
+          "You are a creative team designing NPC characters based upon a given environment prompt and output in a json format",
+      }, {
+          "role": "user",
+          "content": prompt
+      }],
+      model="gpt-4o-mini-2024-07-18",
+  )
+  if chat_completion.choices[0].message.content is not None:
+    temp = json.loads(chat_completion.choices[0].message.content)
+
+  print(type(chat_completion.choices[0].message.content))
+  print(chat_completion)
+  final = chat_completion.choices[0].message.content
+  # return [chat_completion.choices[0].message.content, generated_image.data[0].url]
+  return "" if final is None else final
+
+
 
 async def instruction(file_obj, amount):
   amount = int(amount)
@@ -87,10 +121,29 @@ async def instruction(file_obj, amount):
 
   await asyncio.gather(*tasks)
 
-  results = [task.result() for task in tasks]
-  print(results)
+  results = [json.loads(task.result()) for task in tasks]
+  
+  # Format the results as a list of JSON objects
+  formatted_results = json.dumps(results, indent=2)
 
-  with open('output.json', 'a') as outfile:
-    json.dump(results, outfile, indent=4)
+  # Write the formatted results to output.json in the main project folder
+  output_file = os.path.join(os.getcwd(), 'output.json')
+  with open(output_file, 'w') as outfile:
+      outfile.write(formatted_results)
 
-  return results[0]
+  data = read_json(file_obj)
+  environment_context = (f"Era: {data['era']}, "
+                         f"Time Period: {data['time_period']}, "
+                         f"Detail: {data['detail']}\n\n")
+
+
+  prompt = environment_context 
+
+  edge_list = await relationship_generation(prompt,results)
+  #combine results and edgelist together
+  combined_results = {
+      "characters": results,
+      "edge_list": edge_list
+  }
+
+  return combined_results
