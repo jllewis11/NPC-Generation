@@ -6,3 +6,4 @@ langchain-together
 langchain
 python-dotenv
 chromadb
+psutil
