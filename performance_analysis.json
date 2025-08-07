@@ -1,0 +1,133 @@
+{
+  "timestamp": 1754568242.9360182,
+  "codebase_metrics": {
+    "python_files": 12,
+    "total_lines": 1404,
+    "total_size_bytes": 52923,
+    "largest_files": [
+      {
+        "path": "./simple_performance_check.py",
+        "size_bytes": 9723,
+        "lines": 244
+      },
+      {
+        "path": "./app/generation.py",
+        "size_bytes": 7480,
+        "lines": 195
+      },
+      {
+        "path": "./performance_monitor.py",
+        "size_bytes": 7277,
+        "lines": 203
+      },
+      {
+        "path": "./example.py",
+        "size_bytes": 6851,
+        "lines": 173
+      },
+      {
+        "path": "./app/npcchat.py",
+        "size_bytes": 4753,
+        "lines": 154
+      }
+    ],
+    "file_details": [
+      {
+        "path": "./simple_performance_check.py",
+        "size_bytes": 9723,
+        "lines": 244
+      },
+      {
+        "path": "./app/generation.py",
+        "size_bytes": 7480,
+        "lines": 195
+      },
+      {
+        "path": "./performance_monitor.py",
+        "size_bytes": 7277,
+        "lines": 203
+      },
+      {
+        "path": "./example.py",
+        "size_bytes": 6851,
+        "lines": 173
+      },
+      {
+        "path": "./app/npcchat.py",
+        "size_bytes": 4753,
+        "lines": 154
+      },
+      {
+        "path": "./config.py",
+        "size_bytes": 3915,
+        "lines": 108
+      },
+      {
+        "path": "./main.py",
+        "size_bytes": 3057,
+        "lines": 89
+      },
+      {
+        "path": "./tools/process_dialogue.py",
+        "size_bytes": 2808,
+        "lines": 54
+      },
+      {
+        "path": "./tools/names.py",
+        "size_bytes": 2080,
+        "lines": 55
+      },
+      {
+        "path": "./utils/read.py",
+        "size_bytes": 2056,
+        "lines": 54
+      },
+      {
+        "path": "./tools/personality.py",
+        "size_bytes": 1976,
+        "lines": 53
+      },
+      {
+        "path": "./model.py",
+        "size_bytes": 947,
+        "lines": 22
+      }
+    ]
+  },
+  "dependency_analysis": {
+    "requirements_file_exists": true,
+    "poetry_file_exists": true,
+    "requirements_count": 9,
+    "poetry_lock_size": 394998,
+    "requirements_list": [
+      "openai",
+      "together",
+      "gradio",
+      "langchain-openai",
+      "langchain-together",
+      "langchain",
+      "python-dotenv",
+      "chromadb",
+      "psutil"
+    ]
+  },
+  "optimization_patterns": {
+    "has_config_module": true,
+    "uses_async": true,
+    "has_caching": true,
+    "uses_typing": true,
+    "has_error_handling": true,
+    "async_files_count": 3,
+    "cache_files_count": 6,
+    "typing_files_count": 7,
+    "error_handling_files_count": 8
+  },
+  "recommendations": [
+    "\ud83d\udcc4 High average lines per file (117) - Consider modularization",
+    "\u2705 Config module found - Good for centralized configuration!",
+    "\u26a1 Async patterns found in 3 files - Great for performance!",
+    "\ud83d\udcbe Caching found in 6 files - Excellent for performance!",
+    "\ud83c\udfaf Type hints found in 7 files - Good for maintainability!",
+    "\ud83d\udee1\ufe0f Error handling found in 8 files - Good for robustness!"
+  ]
+}
