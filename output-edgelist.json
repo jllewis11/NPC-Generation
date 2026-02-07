@@ -1,0 +1,68 @@
+[
+  {
+    "from": "Kaelan Thorne",
+    "to": "Thalir",
+    "description": "Kaelan and Thalir share a strong camaraderie, bonding over their mutual love for ecological innovations and sustainable practices. They often collaborate on projects to blend art with technology.",
+    "weight": 0.6
+  },
+  {
+    "from": "Kaelan Thorne",
+    "to": "Axel Thorne",
+    "description": "Though they share a surname, the relationship between Kaelan and Axel is strained; Kaelan finds Axel's artistic pursuits too abstract and is frustrated by his reluctance to practically implement solutions.",
+    "weight": -0.4
+  },
+  {
+    "from": "Thalir",
+    "to": "Axel Thorne",
+    "description": "Thalir and Axel have a deep artistic connection. They inspire one another to explore the boundaries of their craft, often spending late nights discussing philosophies of art and design.",
+    "weight": 0.7
+  },
+  {
+    "from": "Thalir",
+    "to": "Kaelan Thorne",
+    "description": "Thalir admires Kaelan's inventive spirit, but sometimes feels overshadowed by his eagerness to push boundaries. This leads to moments of tension but also a unique blending of their different talents.",
+    "weight": 0.3
+  },
+  {
+    "from": "Axel Thorne",
+    "to": "Kaelan Thorne",
+    "description": "Axel views Kaelan's corporate conflict as a necessary evil but wishes his brother would reconsider how he approaches such entities. They often clash over their differing worldviews.",
+    "weight": -0.2
+  },
+  {
+    "from": "Axel Thorne",
+    "to": "Thalir",
+    "description": "Axel appreciates Thalir's creativity but is often cautious about their experimental approaches to sustainability. This makes their working relationship strong yet filled with challenges.",
+    "weight": 0.5
+  },
+  {
+    "from": "Kaelan Thorne",
+    "to": "Axel Thorne",
+    "description": "Despite their differences, Kaelan feels a brotherly bond with Axel, often reminiscing about their childhood filled with artistic experimentation.",
+    "weight": 0.4
+  },
+  {
+    "from": "Thalir",
+    "to": "Kaelan Thorne",
+    "description": "Thalir supports Kaelan\u2019s unorthodox ideas but fears they may be misused by corporate entities, leading to a protective yet nurturing dynamic.",
+    "weight": 0.5
+  },
+  {
+    "from": "Axel Thorne",
+    "to": "Kaelan Thorne",
+    "description": "Kaelan\u2019s ambition frustrates Axel, leading him to question whether their familial bond can endure the strain and differing objectives they each hold.",
+    "weight": -0.3
+  },
+  {
+    "from": "Thalir",
+    "to": "Kaelan Thorne",
+    "description": "Thalir often seeks Kaelan's expertise in eco-engineering, admiring his innovative approach. This collaborative spirit enhances their relationship, solving problems together.",
+    "weight": 0.6
+  },
+  {
+    "from": "Axel Thorne",
+    "to": "Thalir",
+    "description": "Axel sees Thalir as a kindred spirit in the arts but feels that Thalir's focus on community needs often detracts from their individual artistic aspirations.",
+    "weight": 0.1
+  }
+]

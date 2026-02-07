@@ -646,26 +646,6 @@ def build_image_prompt_router(
     return final_prompt, "Built prompt from selections."
 
 
-# Create Gradio Interface
-# demo = gr.Interface(fn=instruction,
-#                     inputs=[
-#                         "file",
-#                         gr.Slider(1,
-#                                   20,
-#                                   value=1,
-#                                   label="Count",
-#                                   info="Choose between 1 and 20")
-#                     ],
-#                     outputs=["json"],
-#                     title="JSON File Reader",
-#                     description="Upload a JSON file and see its contents.")
-
-# demo.launch(share=True)
-
-
-
-
-
 # Create ChatInterface with clear history functionality
 def build_demo() -> gr.Blocks:
     initial_backend_mode = _normalize_backend_mode(os.getenv("NPC_BACKEND_MODE"))

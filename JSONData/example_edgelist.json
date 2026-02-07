@@ -1,0 +1,72 @@
+{
+  "edge_list": {
+    "relationships": [
+      {
+        "from": "Zyra Kintar",
+        "to": "Kael Thorne",
+        "description": "Zyra admires Kael's charisma and shares his passion for uncovering Nova Terra's mysteries. They often collaborate on eco-friendly projects and shared exploration endeavors.",
+        "weight": 0.7
+      },
+      {
+        "from": "Zyra Kintar",
+        "to": "Kalen Taros",
+        "description": "Zyra finds Kalen's skepticism valuable but feels frustrated by his distrust of corporate interests, which sometimes puts them at odds during discussions about their future missions.",
+        "weight": -0.2
+      },
+      {
+        "from": "Zyra Kintar",
+        "to": "Varek Fionis",
+        "description": "Varek and Zyra share a close bond, supporting each other's dreams of merging exploration with conservation. They often brainstorm innovative eco-projects together.",
+        "weight": 0.8
+      },
+      {
+        "from": "Kael Thorne",
+        "to": "Varek Fionis",
+        "description": "Kael respects Varek's expertise in geological surveying; however, Varek's cautious nature sometimes clashes with Kael's more adventurous approach.",
+        "weight": 0.3
+      },
+      {
+        "from": "Kael Thorne",
+        "to": "Kalen Taros",
+        "description": "Kalen often critiques Kael's idealistic views on trade, leading to heated debates. There is a mutual respect underneath their disagreements.",
+        "weight": 0.1
+      },
+      {
+        "from": "Kael Thorne",
+        "to": "Zyra Kintar",
+        "description": "Kael and Zyra have an easygoing friendship built on shared values of exploration and environmentalism, often conveying ideas through creative mediums.",
+        "weight": 0.6
+      },
+      {
+        "from": "Varek Fionis",
+        "to": "Kalen Taros",
+        "description": "Varek appreciates Kalen's insights into corporate corruption, though he worries that Kalen's approach may be too harsh for effective change.",
+        "weight": 0.4
+      },
+      {
+        "from": "Varek Fionis",
+        "to": "Kael Thorne",
+        "description": "The two have a professional relationship, often collaborating on projects, but differ in tactics on how to achieve their societal goals, leading to tension.",
+        "weight": 0.2
+      },
+      {
+        "from": "Kalen Taros",
+        "to": "Zyra Kintar",
+        "description": "Kalen is protective of Zyra due to her idealism and expression of vulnerability, which leads to a brother-sister-like dynamic where he often looks out for her.",
+        "weight": 0.5
+      },
+      {
+        "from": "Kalen Taros",
+        "to": "Varek Fionis",
+        "description": "Kalen feels a connection with Varek due to their shared skepticism toward corporations, yet Kalen finds Varek's cautious nature slow and stifling.",
+        "weight": -0.1
+      },
+      {
+        "from": "Varek Fionis",
+        "to": "Kael Thorne",
+        "description": "Varek sees Kael's vibrant personality as both refreshing and reckless, often finding himself mediating between Kael's daring plans and the potential consequences.",
+        "weight": -0.3
+      }
+    ]
+  }
+} 
