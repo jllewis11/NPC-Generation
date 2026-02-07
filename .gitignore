@@ -2,3 +2,28 @@
 
 
 __pycache__
+
+# Python / environments
+.venv/
+venv/
+ENV/
+.python-version
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local artifacts / generated data
+flagged/
+output.json
+data/
+*.sqlite3
+*.bin

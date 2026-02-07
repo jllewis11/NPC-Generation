@@ -1,8 +1,11 @@
-openai
-together
 gradio
-langchain-openai
-langchain-together
-langchain
 python-dotenv
 chromadb
+requests
+fastapi
+uvicorn[standard]
+pydantic
+modal
+Pillow
+pytest
+pytest-cov
